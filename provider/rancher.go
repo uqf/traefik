@@ -457,7 +457,7 @@ func (provider *Rancher) serviceFilter(service rancherData) bool {
 	}
 
 	if service.Health != "" && service.Health != "healthy" {
-		log.Debugf("Filtering unhealthy or starting service %s", service.Name)
+		log.Debugf("Filtering unhealthy or starting service %s (%s)", service.Name, service.Health)
 		return false
 	}
 
